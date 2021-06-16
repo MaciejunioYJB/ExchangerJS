@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>Best Exchanger</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/all.min.css">
+     <link rel="stylesheet" href="css/owl.carousel.min.css">
+     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="css/tooplates-style.css">
+</head>
+
+<body data-spy="scroll" data-target="#navbarNav" data-offset="50">
+    <!-- HERO -->
+    <section class="about section-padding" id="about">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-6 col-md-6 col-12">
+                    <h4 class="mb-4">Exchange your currency!</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact section-padding pt-0" id="contact">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-6 col-md-6 col-12">
+            <form action="#" method="get" class="contact-form webform"  role="form">
+                
+                <div class="form-group d-flex flex-column-reverse">
+                    <input class="form-control" list="currencies" name="cf-from" placeholder="PLN">
+                    <datalist id="currencies">
+                      <option value="PLN">
+                      <option value="USD">
+                      <option value="GBP">
+                      <option value="EUR">
+                    </datalist>
+
+                    <label for="cf-from" class="webform-label">From:</label>
+                </div>
+
+                <div class="form-group d-flex flex-column-reverse">
+                  <input class="form-control" list="outcomeCurrencies" name="cf-to" placeholder="USD">
+                  <datalist id="outcomeCurrencies">
+                    <option value="PLN">
+                    <option value="USD">
+                    <option value="GBP">
+                    <option value="EUR">
+                  </datalist>
+
+                  <label for="cf-to" class="webform-label">To:</label>
+                </div>
+
+                <div class="form-group d-flex flex-column-reverse">
+                  <input type="text" class="form-control" name="cf-name" id="cf-name" placeholder="0,00">
+  
+                  <label for="cf-name" class="webform-label">Value:</label>
+                </div>
+  
+                <button type="submit" class="form-control" id="submit-button" name="submit">Calculate</button>
+            </form>
+          </div>
+
+          <div class="mx-auto col-lg-5 col-md-6 col-12">
+            <img src="images/money.jpg" class="img-fluid" alt="Money">
+          </div>
+        </div>
+      </div>
+    </section>
+</body>
+</html>
