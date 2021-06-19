@@ -19,12 +19,10 @@
      <link rel="stylesheet" href="css/tooplates-style.css">
 </head>
 
-<body data-spy="scroll" data-target="#navbarNav" data-offset="50">
-    <!-- HERO -->
+<body data-spy="scroll" data-offset="50">
     <section class="about section-padding" id="about">
         <div class="container">
             <div class="row">
-
                 <div class="col-lg-6 col-md-6 col-12">
                     <h4 class="mb-4">Exchange your currency!</h4>
                 </div>
@@ -37,10 +35,10 @@
         <div class="row">
 
           <div class="col-lg-6 col-md-6 col-12">
-            <form action="#" method="get" class="contact-form webform"  role="form">
+            <div class="contact-form webform">
                 
                 <div class="form-group d-flex flex-column-reverse">
-                    <input class="form-control" list="currencies" name="cf-from" placeholder="PLN">
+                    <input class="form-control" list="currencies" name="cf-from" id="cf-from" placeholder="PLN">
                     <datalist id="currencies">
                       <option value="PLN">
                       <option value="USD">
@@ -52,7 +50,7 @@
                 </div>
 
                 <div class="form-group d-flex flex-column-reverse">
-                  <input class="form-control" list="outcomeCurrencies" name="cf-to" placeholder="USD">
+                  <input class="form-control" list="outcomeCurrencies" name="cf-to" id="cf-to" placeholder="USD">
                   <datalist id="outcomeCurrencies">
                     <option value="PLN">
                     <option value="USD">
@@ -64,13 +62,16 @@
                 </div>
 
                 <div class="form-group d-flex flex-column-reverse">
-                  <input type="text" class="form-control" name="cf-name" id="cf-name" placeholder="0,00">
+                  <input type="text" class="form-control" name="cf-value" id="cf-value" placeholder="0,00">
   
-                  <label for="cf-name" class="webform-label">Value:</label>
+                  <label for="cf-value" class="webform-label">Value:</label>
                 </div>
-  
-                <button type="submit" class="form-control" id="submit-button" name="submit">Calculate</button>
-            </form>
+                <button id="submit-button" onclick="submit(this)">Calculate</button>
+                <div>
+                  <h3></h3>
+                  <p name="result" id="result">PLN -> USD = 0,00</p>  
+                </div>
+              </div>
           </div>
 
           <div class="mx-auto col-lg-5 col-md-6 col-12">
@@ -79,5 +80,6 @@
         </div>
       </div>
     </section>
-</body>
+    <script src="js/client.js"></script>  
+  </body>
 </html>
