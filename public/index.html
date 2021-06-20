@@ -40,10 +40,7 @@
                 <div class="form-group d-flex flex-column-reverse">
                     <input class="form-control" list="currencies" name="cf-from" id="cf-from" placeholder="PLN">
                     <datalist id="currencies">
-                      <option value="PLN">
-                      <option value="USD">
-                      <option value="GBP">
-                      <option value="EUR">
+                      <option value="PLN"><option value="USD"><option value="GBP"><option value="EUR">
                     </datalist>
 
                     <label for="cf-from" class="webform-label">From:</label>
@@ -52,10 +49,7 @@
                 <div class="form-group d-flex flex-column-reverse">
                   <input class="form-control" list="outcomeCurrencies" name="cf-to" id="cf-to" placeholder="USD">
                   <datalist id="outcomeCurrencies">
-                    <option value="PLN">
-                    <option value="USD">
-                    <option value="GBP">
-                    <option value="EUR">
+                    <option value="PLN"><option value="USD"><option value="GBP"><option value="EUR">
                   </datalist>
 
                   <label for="cf-to" class="webform-label">To:</label>
@@ -66,11 +60,11 @@
   
                   <label for="cf-value" class="webform-label">Value:</label>
                 </div>
-                <button id="submit-button" onclick="submit(this)">Calculate</button>
-                <div>
-                  <h3></h3>
-                  <p name="result" id="result">PLN -> USD = 0,00</p>  
-                </div>
+                <button id="submit-button" onclick="submit()">Calculate</button>
+                <div class="form-group d-flex flex-column-reverse">
+                  <h5 id="result"></h5>
+                  <p id="error"></p>
+              </div>
               </div>
           </div>
 
