@@ -30,7 +30,8 @@
         </div>
     </section>
 
-    <section class="contact section-padding pt-0" id="contact">
+    <!--CURRENCY-->
+    <section class="contact section-padding pt-0" id="currency">
       <div class="container">
         <div class="row">
 
@@ -70,6 +71,37 @@
 
           <div class="mx-auto col-lg-5 col-md-6 col-12">
             <img src="images/money.jpg" class="img-fluid" alt="Money">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--CRYPTO-->
+    <section class="contact section-padding pt-0" id="crypto">
+      <div class="container">
+        <div class="row">
+
+          <div class="mx-auto col-lg-5 col-md-6 col-12">
+            <img src="images/crypto.jpg" class="img-fluid" alt="Money">
+          </div>
+
+          <div class="col-lg-6 col-md-6 col-12">
+            <div class="contact-form webform">
+                
+                <div class="form-group d-flex flex-column-reverse">
+                    <input class="form-control" list="crypto-currencies" name="cf-from2" id="cf-from2" placeholder="BTC">
+                    <datalist id="crypto-currencies">
+                      <option value="BTC"><option value="ETH"><option value="USDT">
+                    </datalist>
+
+                    <label for="cf-from2" class="webform-label">Select Cryptocurrency:</label>
+                </div>
+                <button id="submit-button-crypto" onclick="submitCrypto()">Show</button>
+                <div class="form-group d-flex flex-column-reverse">
+                  <h5 id="result-crypto"></h5>
+                  <p id="error-crypto"></p>
+              </div>
+              </div>
           </div>
         </div>
       </div>

@@ -1,0 +1,282 @@
+[
+     {
+          "id": 1,
+          "name": "Bitcoin",
+          "symbol": "BTC",
+          "last_updated": "2021-06-20T12:20:02.000Z",
+          "exchanges": [
+               {
+                    "currencyName": "USD",
+                    "exchangeValue": 33483.05638178973,
+                    "percent_change_1h": "-1.78316527",
+                    "percent_change_24h": "-7.9314956"
+               }
+          ]
+     },
+     {
+          "id": 1027,
+          "name": "Ethereum",
+          "symbol": "ETH",
+          "last_updated": "2021-06-20T12:20:02.000Z",
+          "exchanges": [
+               {
+                    "currencyName": "USD",
+                    "exchangeValue": 2056.225499916915,
+                    "percent_change_1h": "-1.60417206",
+                    "percent_change_24h": "-9.5056309"
+               }
+          ]
+     },
+     {
+          "id": 825,
+          "name": "Tether",
+          "symbol": "USDT",
+          "last_updated": "2021-06-20T12:19:08.000Z",
+          "exchanges": [
+               {
+                    "currencyName": "USD",
+                    "exchangeValue": 1.00096538027067,
+                    "percent_change_1h": "-0.00369649",
+                    "percent_change_24h": "-0.04792492"
+               }
+          ]
+     },
+     {
+          "id": 1839,
+          "name": "Binance Coin",
+          "symbol": "BNB",
+          "last_updated": "2021-06-20T12:20:07.000Z",
+          "exchanges": [
+               {
+                    "currencyName": "USD",
+                    "exchangeValue": 312.1465383686325,
+                    "percent_change_1h": "-2.81739873",
+                    "percent_change_24h": "-9.35968416"
+               }
+          ]
+     },
+     {
+          "id": 2010,
+          "name": "Cardano",
+          "symbol": "ADA",
+          "last_updated": "2021-06-20T12:19:09.000Z",
+          "exchanges": [
+               {
+                    "currencyName": "USD",
+                    "exchangeValue": 1.32333725902417,
+                    "percent_change_1h": "-1.62027196",
+                    "percent_change_24h": "-7.84062782"
+               }
+          ]
+     },
+     {
+          "id": 74,
+          "name": "Dogecoin",
+          "symbol": "DOGE",
+          "last_updated": "2021-06-20T12:20:03.000Z",
+          "exchanges": [
+               {
+                    "currencyName": "USD",
+                    "exchangeValue": 0.25864735034875,
+                    "percent_change_1h": "-3.25365715",
+                    "percent_change_24h": "-12.84708534"
+               }
+          ]
+     },
+     {
+          "id": 52,
+          "name": "XRP",
+          "symbol": "XRP",
+          "last_updated": "2021-06-20T12:20:03.000Z",
+          "exchanges": [
+               {
+                    "currencyName": "USD",
+                    "exchangeValue": 0.70135514984004,
+                    "percent_change_1h": "-2.46568234",
+                    "percent_change_24h": "-12.55645047"
+               }
+          ]
+     },
+     {
+          "id": 3408,
+          "name": "USD Coin",
+          "symbol": "USDC",
+          "last_updated": "2021-06-20T12:20:04.000Z",
+          "exchanges": [
+               {
+                    "currencyName": "USD",
+                    "exchangeValue": 1.00116734688016,
+                    "percent_change_1h": "0.01997226",
+                    "percent_change_24h": "0.00803624"
+               }
+          ]
+     },
+     {
+          "id": 6636,
+          "name": "Polkadot",
+          "symbol": "DOT",
+          "last_updated": "2021-06-20T12:20:05.000Z",
+          "exchanges": [
+               {
+                    "currencyName": "USD",
+                    "exchangeValue": 19.08661132784045,
+                    "percent_change_1h": "-1.33492438",
+                    "percent_change_24h": "-10.61424515"
+               }
+          ]
+     },
+     {
+          "id": 7083,
+          "name": "Uniswap",
+          "symbol": "UNI",
+          "last_updated": "2021-06-20T12:19:08.000Z",
+          "exchanges": [
+               {
+                    "currencyName": "USD",
+                    "exchangeValue": 18.83714674609484,
+                    "percent_change_1h": "-1.68511201",
+                    "percent_change_24h": "-9.88292737"
+               }
+          ]
+     },
+     {
+          "id": 1831,
+          "name": "Bitcoin Cash",
+          "symbol": "BCH",
+          "last_updated": "2021-06-20T12:20:08.000Z",
+          "exchanges": [
+               {
+                    "currencyName": "USD",
+                    "exchangeValue": 518.2774190068577,
+                    "percent_change_1h": "-1.87569098",
+                    "percent_change_24h": "-10.73728537"
+               }
+          ]
+     },
+     {
+          "id": 2,
+          "name": "Litecoin",
+          "symbol": "LTC",
+          "last_updated": "2021-06-20T12:20:02.000Z",
+          "exchanges": [
+               {
+                    "currencyName": "USD",
+                    "exchangeValue": 144.81044560396026,
+                    "percent_change_1h": "-1.739792",
+                    "percent_change_24h": "-9.95907742"
+               }
+          ]
+     },
+     {
+          "id": 4687,
+          "name": "Binance USD",
+          "symbol": "BUSD",
+          "last_updated": "2021-06-20T12:20:06.000Z",
+          "exchanges": [
+               {
+                    "currencyName": "USD",
+                    "exchangeValue": 1.00097375380103,
+                    "percent_change_1h": "-0.00139636",
+                    "percent_change_24h": "-0.01199197"
+               }
+          ]
+     },
+     {
+          "id": 5426,
+          "name": "Solana",
+          "symbol": "SOL",
+          "last_updated": "2021-06-20T12:20:04.000Z",
+          "exchanges": [
+               {
+                    "currencyName": "USD",
+                    "exchangeValue": 31.68906323105341,
+                    "percent_change_1h": "-4.67534513",
+                    "percent_change_24h": "-14.08017451"
+               }
+          ]
+     },
+     {
+          "id": 1975,
+          "name": "Chainlink",
+          "symbol": "LINK",
+          "last_updated": "2021-06-20T12:19:12.000Z",
+          "exchanges": [
+               {
+                    "currencyName": "USD",
+                    "exchangeValue": 19.31424840322209,
+                    "percent_change_1h": "-1.21444021",
+                    "percent_change_24h": "-11.58641778"
+               }
+          ]
+     },
+     {
+          "id": 3890,
+          "name": "Polygon",
+          "symbol": "MATIC",
+          "last_updated": "2021-06-20T12:19:09.000Z",
+          "exchanges": [
+               {
+                    "currencyName": "USD",
+                    "exchangeValue": 1.29938156258989,
+                    "percent_change_1h": "-1.37412859",
+                    "percent_change_24h": "-8.74775619"
+               }
+          ]
+     },
+     {
+          "id": 2416,
+          "name": "THETA",
+          "symbol": "THETA",
+          "last_updated": "2021-06-20T12:20:05.000Z",
+          "exchanges": [
+               {
+                    "currencyName": "USD",
+                    "exchangeValue": 8.08359455704967,
+                    "percent_change_1h": "-1.95153754",
+                    "percent_change_24h": "-11.47588652"
+               }
+          ]
+     },
+     {
+          "id": 3717,
+          "name": "Wrapped Bitcoin",
+          "symbol": "WBTC",
+          "last_updated": "2021-06-20T12:20:06.000Z",
+          "exchanges": [
+               {
+                    "currencyName": "USD",
+                    "exchangeValue": 33572.023369402435,
+                    "percent_change_1h": "-1.45598224",
+                    "percent_change_24h": "-7.55613884"
+               }
+          ]
+     },
+     {
+          "id": 512,
+          "name": "Stellar",
+          "symbol": "XLM",
+          "last_updated": "2021-06-20T12:20:05.000Z",
+          "exchanges": [
+               {
+                    "currencyName": "USD",
+                    "exchangeValue": 0.27122401937368,
+                    "percent_change_1h": "-2.230987",
+                    "percent_change_24h": "-11.41638669"
+               }
+          ]
+     },
+     {
+          "id": 8916,
+          "name": "Internet Computer",
+          "symbol": "ICP",
+          "last_updated": "2021-06-20T12:20:07.000Z",
+          "exchanges": [
+               {
+                    "currencyName": "USD",
+                    "exchangeValue": 45.23683079075957,
+                    "percent_change_1h": "-0.52355348",
+                    "percent_change_24h": "-16.36614299"
+               }
+          ]
+     }
+]

@@ -232,6 +232,20 @@ https://www.tooplate.com/view/2120-ben-resume
     max-width: 190px;
   }
 
+  .contact-form #submit-button-crypto {
+    background: var(--primary-color);
+    border: none;
+    border-radius: var(--border-radius-medium);
+    color: var(--dark-color);
+    cursor: pointer;
+    font-size: var(--p-font-size);
+    line-height: 0;
+    margin-top: 2.5rem;
+    padding: 1.5rem 1.8rem 1.8rem 1.8rem;
+    white-space: nowrap;
+    max-width: 190px;
+  }
+
   /*---------------------------------------
      RESPONSIVE STYLES              
   -----------------------------------------*/
