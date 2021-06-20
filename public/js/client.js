@@ -76,10 +76,6 @@ function convert(response, baseCurrency, currencyToConvert, valueToConvert, resu
 
 function convertCrypto(response, cryptoCurrency, resultBox, errorBox) {
     found = false;
-    response.forEach(currency => {
-        if (currency.symbol)
-    });
-    
     resultBox.innerText = "result test";
     errorBox.innerText = "error test";
 }
