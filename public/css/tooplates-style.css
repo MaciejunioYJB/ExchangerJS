@@ -1,11 +1,3 @@
-/*
-
-Tooplate 2120 Ben Resume
-
-https://www.tooplate.com/view/2120-ben-resume
-
-*/
-
   @font-face {
       font-family: 'Plain';
       src: url('../localfonts/Plain-Regular.woff2') format('woff2'),
@@ -148,10 +140,10 @@ https://www.tooplate.com/view/2120-ben-resume
   }
 
   /*---------------------------------------
-     CONTACT               
+     EXCHANGE FORM               
   -----------------------------------------*/
   
-  .contact-form .form-control {
+  .exchange-form .form-control {
     background: transparent;
     border: none;
     border-bottom: 1px solid rgba(142, 140, 140, 0.35);
@@ -165,11 +157,11 @@ https://www.tooplate.com/view/2120-ben-resume
     cursor: text;
   }
 
-  .contact-form input {
+  .exchange-form input {
     height: calc(2.25rem + 10px);
   }
 
-  .contact-form .form-group {
+  .exchange-form .form-group {
     margin: 0 0 1rem;
     position: relative;
   }
@@ -181,7 +173,7 @@ https://www.tooplate.com/view/2120-ben-resume
     margin-bottom: 5px;
   }
 
-  .contact-form .form-control:placeholder-shown + .webform-label {
+  .exchange-form .form-control:placeholder-shown + .webform-label {
     cursor: text;
     max-width: 66.66%;
     white-space: nowrap;
@@ -191,34 +183,34 @@ https://www.tooplate.com/view/2120-ben-resume
     transform: translate(0, 2.125rem) scale(1.5);
   }
 
-  .contact-form ::-webkit-input-placeholder {
+  .exchange-form ::-webkit-input-placeholder {
     opacity: 0;
     transition: inherit;
     color: var(--dark-color);
   }
 
-  .contact-form ::-moz-placeholder {
+  .exchange-form ::-moz-placeholder {
     opacity: 0;
     transition: inherit;
     color: var(--dark-color);
   }
 
-  .contact-form .form-control:focus::-webkit-input-placeholder {
+  .exchange-form .form-control:focus::-webkit-input-placeholder {
     opacity: 1;
   }
 
-  .contact-form .form-control:focus::-moz-placeholder {
+  .exchange-form .form-control:focus::-moz-placeholder {
     opacity: 1;
   }
 
-  .contact-form .form-control:not(:placeholder-shown) + .webform-label,
-  .contact-form .form-control:focus + .webform-label {
+  .exchange-form .form-control:not(:placeholder-shown) + .webform-label,
+  .exchange-form .form-control:focus + .webform-label {
     transform: translate(0, 0) scale(1);
     cursor: pointer;
     color: var(--gray-color);
   }
 
-  .contact-form #submit-button {
+  .exchange-form #submit-button {
     background: var(--primary-color);
     border: none;
     border-radius: var(--border-radius-medium);
@@ -232,7 +224,7 @@ https://www.tooplate.com/view/2120-ben-resume
     max-width: 190px;
   }
 
-  .contact-form #submit-button-crypto {
+  .exchange-form #submit-button-crypto {
     background: var(--primary-color);
     border: none;
     border-radius: var(--border-radius-medium);

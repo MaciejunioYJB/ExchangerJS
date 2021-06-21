@@ -1,11 +1,11 @@
 var file = null;
 var cryptoFile = null;
 
-fetch('json/currencies1.json')
+fetch('json/currencies.json')
   .then(response => response.json())
   .then(jsonResponse => file = jsonResponse);
 
-fetch('json/crypto1.json')
+fetch('json/crypto.json')
 .then(response => response.json())
 .then(jsonResponse => cryptoFile = jsonResponse);
 
@@ -20,7 +20,12 @@ function submit() {
     console.log("baseCurrency -> " + baseCurrency);
     console.log("currencyToConvert -> " + currencyToConvert);
     console.log("valueToConvert -> " + valueToConvert);
-    convert(file, baseCurrency, currencyToConvert, valueToConvert, resultBox, errorBox);
+    if (baseCurrency === currencyToConvert) {
+        errorBox.innerText = "We can't convert the same currency";
+    }
+    else {
+        convert(file, baseCurrency, currencyToConvert, valueToConvert, resultBox, errorBox);
+    }
 }
 
 function submitCrypto() {
@@ -42,11 +47,15 @@ function convert(response, baseCurrency, currencyToConvert, valueToConvert, resu
             var value = currency.rates[currencyToConvert];
             console.log("VALUE -> " + value);
             if (!value) {
-                errorBox.innerText = "Unable to found " + currencyToConvert;
+                errorBox.innerText = "Unable to find " + currencyToConvert;
             }
             var result = convertedValue * value;
             console.log("RESULT -> " + result);
-            resultBox.innerText = `${valueToConvert} ${baseCurrency} = ${result} ${currencyToConvert}`
+            if (!result) {
+                errorBox.innerText = `We can't convert ${valueToConvert} ${baseCurrency} to ${currencyToConvert}`;
+            } else {
+                resultBox.innerText = `${valueToConvert} ${baseCurrency} = ${result} ${currencyToConvert}`
+            }
             found = true;
         }
     });
@@ -60,7 +69,7 @@ function convertCrypto(response, cryptoCurrency, resultBox, errorBox) {
     response.forEach(currency => {
         if (currency.symbol === cryptoCurrency) {
             var value = currency.exchanges[0].exchangeValue;
-            resultBox.innerText = `1${cryptoCurrency} = ${value} USD`;
+            resultBox.innerText = `1.00 ${cryptoCurrency} = ${value} USD`;
             found = true;
         }
     })

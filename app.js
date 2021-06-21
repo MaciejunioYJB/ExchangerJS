@@ -43,7 +43,7 @@ function getCurrencies() {
   const url = "https://u7u0iwpuhc.execute-api.eu-central-1.amazonaws.com";
   const method = "/Prod/currExchangeQuery";
   var headers = new Headers();
-  headers.append("x-api-key", "uhu63XPxEc8cy9gkfVcVi01Nv1bYjco4gtjxxES6");
+  headers.append("x-api-key", process.env.ExchangerApiKey);
 
   var requestOptions = {
     method: 'GET',
@@ -67,7 +67,7 @@ function getCryptoCurrencies() {
   const url = "/Prod/cryptoQuery";
 
   var headers = new Headers();
-  headers.append("x-api-key", "uhu63XPxEc8cy9gkfVcVi01Nv1bYjco4gtjxxES6");
+  headers.append("x-api-key", process.env.ExchangerApiKey);
 
   var requestOptions = {
     method: 'GET',
@@ -94,6 +94,6 @@ function saveToFile(fileName, data) {
 
 //CRON JOB
 nodeCron.schedule('0 */4 * * *', () => {
-  saveToFile("public/js/currencies1.json", getCurrencies());
-  saveToFile("public/js/crypto1.json", getCryptoCurrencies());
+  saveToFile("public/js/currencies.json", getCurrencies());
+  saveToFile("public/js/crypto.json", getCryptoCurrencies());
 });
