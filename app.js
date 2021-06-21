@@ -3,9 +3,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var fs = require('fs');
+var nodeCron = require('node-cron');
 
 var app = express();
 
@@ -18,9 +17,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -39,3 +35,65 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+
+//Download currencies
+function getCurrencies() {
+  var responseFile = null;
+  const url = "https://u7u0iwpuhc.execute-api.eu-central-1.amazonaws.com";
+  const method = "/Prod/currExchangeQuery";
+  var headers = new Headers();
+  headers.append("x-api-key", "uhu63XPxEc8cy9gkfVcVi01Nv1bYjco4gtjxxES6");
+
+  var requestOptions = {
+    method: 'GET',
+    headers: headers,
+    redirect: 'follow'
+  };
+
+  console.log(`Sending request: ${requestOptions.method}${method} to ${url}`);
+
+  fetch(url + method, requestOptions)
+    .then(response => response.json())
+    .then(jsonResponse => responseFile = jsonResponse)
+    .catch(error => console.log('error', error));
+  return responseFile;
+}
+
+//Download crypto currencies
+function getCryptoCurrencies() {
+  var responseFile = null;
+  const method = "https://u7u0iwpuhc.execute-api.eu-central-1.amazonaws.com";
+  const url = "/Prod/cryptoQuery";
+
+  var headers = new Headers();
+  headers.append("x-api-key", "uhu63XPxEc8cy9gkfVcVi01Nv1bYjco4gtjxxES6");
+
+  var requestOptions = {
+    method: 'GET',
+    headers: headers,
+    redirect: 'follow'
+  };
+
+  console.log(`Sending request: ${requestOptions.method}${method} to ${url}`);
+
+  fetch(url + method, requestOptions)
+    .then(response => response.json())
+    .then(jsonResponse => responseFile = jsonResponse)
+    .catch(error => console.log('error', error));
+  return responseFile;
+}
+
+function saveToFile(fileName, data) {
+  fs.writeFile(fileName, JSON.stringify(data), function(err) {
+    if (err) {
+        console.log(err);
+    }
+  });
+}
+
+//CRON JOB
+nodeCron.schedule('0 */4 * * *', () => {
+  saveToFile("public/js/currencies1.json", getCurrencies());
+  saveToFile("public/js/crypto1.json", getCryptoCurrencies());
+});

@@ -1,30 +1,11 @@
 var file = null;
 var cryptoFile = null;
-/*
-GET OPERATION
-var headers = new Headers();
-headers.append("x-api-key", "uhu63XPxEc8cy9gkfVcVi01Nv1bYjco4gtjxxES6");
-headers.append("Access-Control-Allow-Origin", "https://u7u0iwpuhc.execute-api.eu-central-1.amazonaws.com");
 
-var requestOptions = {
-  method: 'GET',
-  headers: headers,
-  redirect: 'follow'
-};
-
-fetch("https://u7u0iwpuhc.execute-api.eu-central-1.amazonaws.com/Prod/currExchangeQuery", requestOptions)
-  .then(response => response.json())
-  .then(jsonResponse => file = jsonResponse)
-  .catch(error => console.log('error', error));
-
-console.log(file);
-*/
-
-fetch('json/currencies.json')
+fetch('json/currencies1.json')
   .then(response => response.json())
   .then(jsonResponse => file = jsonResponse);
-  
-fetch('json/crypto.json')
+
+fetch('json/crypto1.json')
 .then(response => response.json())
 .then(jsonResponse => cryptoFile = jsonResponse);
 
@@ -70,12 +51,20 @@ function convert(response, baseCurrency, currencyToConvert, valueToConvert, resu
         }
     });
     if (!found) {
-        errorBox.innerText = "Unable to found " + baseCurrency;
+        errorBox.innerText = "Unable to find " + baseCurrency;
     }
 }
 
 function convertCrypto(response, cryptoCurrency, resultBox, errorBox) {
     found = false;
-    resultBox.innerText = "result test";
-    errorBox.innerText = "error test";
+    response.forEach(currency => {
+        if (currency.symbol === cryptoCurrency) {
+            var value = currency.exchanges[0].exchangeValue;
+            resultBox.innerText = `1${cryptoCurrency} = ${value} USD`;
+            found = true;
+        }
+    })
+    if (!found) {
+        errorBox.innerText = "Unable to find " + cryptoCurrency;
+    }
 }
